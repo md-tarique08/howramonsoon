@@ -7,6 +7,7 @@ collections:
 - label: "RaceInfo"
   name: "raceinfo"
   folder: "content/raceinfo"
+  filter: {field: "type", value: "raceinfo"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
@@ -19,6 +20,7 @@ collections:
 - label: "RaceWeekend"
   name: "raceweekend"
   folder: "content/raceweekend"
+  filter: {field: "type", value: "raceweekend"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
@@ -31,6 +33,7 @@ collections:
 - label: "FAQ"
   name: "faq"
   folder: "content/faq"
+  filter: {field: "type", value: "raceinfo"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
