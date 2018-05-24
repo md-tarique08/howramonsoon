@@ -25,52 +25,63 @@
 		{{ else }}
     <meta property="og:image" content="{{ (trim .Site.Data.meta.fb_cover "/") | absURL}}" />
 		{{end}}
-    <link href="https://fonts.googleapis.com/css?family=Muli:700i|Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
     <link href="{{ "css/main.css" | absURL }}" rel="stylesheet" type="text/css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <script type="text/javascript" src='{{ "dist/bb.min.js" | absURL}}' data-turbolinks-eval="true"></script>
-    <script src="{{ "js/siema.min.js" | absURL }}" data-turbolinks-eval="true"></script>
-    <script src="{{ "js/lory.min.js" | absURL }}" data-turbolinks-eval="true"></script>
     <script src="{{ "js/turbolinks.js" | absURL }}"></script>
+    <style>
+      body, * {
+        font-family: "Raleway", sans-serif;
+      }
+      .race-bg {
+        background: #1FA2FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+      .menu-bg{
+        background: #B2FEFA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
   </head>
-  <body class="pt4">
-    <header>
-      <nav class="ph3 ph4-m ph5-l bg-white shadow-1 z-5 pv2 fixed top-0 left-0 right-0 flex items-center">
-        <div class="pr2">
-          <a href="/" class="link"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Adiba Infotech" class="nt2" style="max-height:55px;"></a>
+  <body style="padding-top:64px;">
+    <header class="fixed pin-t pin-l pin-r z-50 shadow bg-white">
+      <nav class="container mx-auto bg-white text-blue shadow-1 py-3 flex items-center px-3 md:px-6 lg:px-0">
+        <div class="flex-auto">
+          <a href="/" class="no-underline text-xl text-blue-dark hover:text-blue-darker font-bold inline-block py-2">Howrah Monsoon Run</a>
         </div>
         <div class="flex-auto">
-          <a href="/" class="link f4 ttu tracked navy b"></a>
         </div>
-        <div class="tr dn db-l">
-          <a class="link pa2 ttu f6 navy b dib" href="/">Home</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/about">About</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/product">Products</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/enquiry_form">Enquiry Form</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/emi_calculator">EMI Calculator</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/become_partner">Become a partner</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/awards">Awards</a>
-          <a class="link pa2 ttu f6 navy b dib" href="/contact" data-turbolinks="false">Contact</a>
+        <div class="hidden md:block">
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="/">Home</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="/raceinfo">Race Info</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="/raceweekend">Race Weekend</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="http://128.199.199.202:4100/">Register</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="http://128.199.199.202:4100/">Application Status</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="/faq" data-turbolinks="false">FAQ</a>
+          <a class="no-underline font-bold text-blue rounded px-3 py-2 hover:bg-blue-lighter hover:text-blue-dark text-sm inline-block" href="/contact" data-turbolinks="false">Contact</a>
         </div>
-       <div class="tr db dn-l ba pa2 br2 pointer" onclick="toggle_mobile_menu()">
-          <div class="bg-navy mb1" style="height:4px; width:30px;"></div>
-          <div class="bg-navy mb1" style="height:4px; width:30px;"></div>
-          <div class="bg-navy" style="height:4px; width:30px;"></div>
+       <div class="text-right block md:hidden" onclick="toggle_mobile_menu()">
+          <div class="bg-blue-dark mb-1" style="height:4px; width:30px;"></div>
+          <div class="bg-blue-dark mb-1" style="height:4px; width:30px;"></div>
+          <div class="bg-blue-dark" style="height:4px; width:30px;"></div>
         </div>
-        <div id="mobile_nav" class="fixed top-0 right-0 bottom-0 w-80 w-50-m bg-white z-5 shadow-2 pv3 ph3 ph4-m dn">
-          <div class="flex items-start">
-            <a href="/" class="link flex-auto"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Adiba Infotech" class="nt1" style="max-height:90px;"></a>
-            <div class="tr db ba ph2 pv1 br2 pointer b lh-solid f3 b-black black" onclick="toggle_mobile_menu()">X</div>
+        <div id="mobile_nav" class="fixed pin-t pin-r pin-b overflow-y-auto z-50 shadow-lg py-3 px-3 hidden menu-bg">
+          <div class="flex items-center border-b border-blue-dark">
+            <h2 class="text-xl mr-6">Howrah Monsoon Run</h2>
+            <div class="text-right block px-3 py-2 pointer font-bold leding-none text-xl text-blue-dark" onclick="toggle_mobile_menu()">X</div>
           </div>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/">Home</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/about">About</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/product">Product</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/enquiry_form">Enquiry Form</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/emi_calculator">EMI Calculator</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/become_partner">Become a partner</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/awards">Awards</a>
-          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/contact" data-turbolinks="false">Contact</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="/">Home</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="/raceinfo">Race Info</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="/racewekeend">Race Weekend</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="http://128.199.199.202:4100/">Register</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="http://128.199.199.202:4100/">Application Status</a>
+
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="/faq" data-turbolinks="false">FAQ</a>
+          <a class="no-underline border-b border-blue-light py-4 text-blue-dark hover:text-blue px-3 block" href="/contact" data-turbolinks="false">Contact</a>
         </div>
       </nav>
     </header>

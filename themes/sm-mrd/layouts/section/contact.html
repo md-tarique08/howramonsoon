@@ -1,32 +1,21 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
-{{ partial "fixed_icon.html" . }}
+<!-- {{ partial "fixed_icon.html" . }} -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOp_b26dWumYiB9Pc3EwrC-FEPP2CkgGk" data-turbolinks-eval="false"></script>
-  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-      <main class="pr4-l w-100 w-40-l">
-        <address class="mb4 fs-normal">
-          <h3>{{.Params.business_name}}</h3>
-          <div>{{ replace .Params.address "\n" "<br>" | safeHTML }}</div>
-          <div>Tel: {{.Params.phone}}</div>
-          <div>Mobile: {{.Params.mobile}}</div>
-          <div>Email: <a href="mailto:{{.Params.email}}">{{.Params.email}}</a></div>
-        </address>
-        <div class="content">
-          {{ .Content }}
+  <div class="flex items-stretch items-start flex-wrap -mt-8">
+      <main class="w-full md:w-1/2 px-3 md:px-6 lg:px-0 pt-8">
+        <div class="mx-auto mb-6" style="max-width: 480px;">
+          <address class="roman leading-normal">
+            <h3 class="text-xl">{{.Params.business_name}}</h3>
+            <div>{{ replace .Params.address "\n" "<br>" | safeHTML }}</div>
+            <div>Mobile: {{.Params.mobile}}</div>
+          </address>
+          <div class="content">
+            {{ .Content }}
+          </div>
         </div>
-        <form name="contact" netlify class="w-100 mb5">
-          <label class="db ttu tracked gray b mb1 f6">Name</label>
-          <input name="name" id="name" type="text" class="input-reset db w-100 pa3 ba mr2 mb3 gray" required>
-          <label class="db ttu tracked gray b mb1 f6">Email</label>
-          <input name= "email" id="email" type="email" class="input-reset db w-100 pa3 ba mr2 mb3 gray" required>
-          <label class="db ttu tracked gray b mb1 f6">Contact No</label>
-          <input name="contact_no" id="contact_no" type="text" class="input-reset db w-100 pa3 ba mr2 mb3 gray" required>
-          <label class="db ttu tracked gray b mb1 f6">Message</label>
-          <textarea name="message" id= "message" rows="4" class="input-reset db w-100 pa3 ba mr2 mb3 gray" required></textarea>
-          <button type="submit" class="bn pa3 bg-navy white hover-bg-dark-navy b ttu tracked br2">Submit</button>
-        </form>
       </main>
-      <aside class="pr3-m pr4-l w-100 w-60-l bg-near-white ba bw1 b--black-20 mb4" id="map-canvas" style="min-height: 360px;">
+      <aside class="w-full md:w-1/2" id="map-canvas" style="min-height: 480px;">
       </aside>
   </div>
   <script>

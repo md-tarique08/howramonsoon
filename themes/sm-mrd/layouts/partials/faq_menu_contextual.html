@@ -6,11 +6,20 @@
 {{ $i := sub ($currentSection | len) 1 }}
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 1 }}
-<div class="flex items-center items-stretch flex-wrap">
-  {{ range sort $currentSection "Params.order" }}
-    <a href="{{ .URL }}" class="no-underline text-blue font-bold flex-auto border-b border-grey-light mb-2 py-3 {{ if eq $currentPageUrl .URL }} border-blue{{end}} text-center">
-        {{ .Title }}
-    </a>
-  {{ end }}
+<div style="margin-left: 40px">
+  <div>
+    <a href="/faq"><h1>FAQ</h1></a>
+  </div>
+  <ul  style="list-style: none;">
+    {{ range sort $currentSection "Params.order" }}
+      <li>
+        <a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}}  navy">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
 </div>
 {{ end }}
+
+

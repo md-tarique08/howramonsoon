@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+  <div class="container mx-auto max-w-md px-3 md:px-6 lg:px-0">
+      {{ partial "menu-contextual.html" . }}
+      <main class="py-8">
+        <div class="bg-center bg-cover mb-8" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}'); height:40vh;">
+        </div>
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </main>
+  </div>
+{{ partial "footer.html" . }}

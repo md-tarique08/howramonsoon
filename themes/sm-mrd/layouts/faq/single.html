@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+  <div class="flex flex-wrap bg-white-lighter">
+  <div class="w-2/5 p-2">
+    <div class="text-white-darker text-center bg-white-light p-2"> {{ partial "faq_menu_contextual.html" . }}</div>
+  </div>
+  <div class="w-2/5 p-2">
+    <div class="text-white-darker text-center bg-white-light p-2"> {{ .Content }}</div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+

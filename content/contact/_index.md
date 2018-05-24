@@ -1,16 +1,12 @@
 ---
 title: Contact
-seo_keywords: "MRD Finance"
-seo_description: "MRD Finance"
-google_map_coordinates: '22.5720522,88.35130509999999'
-featured_image: images/slider2.jpg
-business_name: MRD Financial Advisory Pvt Ltd
+seo_title: Conact | Howrah Monsoon Run
+seo_keywords: "Howrah Monsoon Run, howrah marathon, howrah race, monsoon race"
+seo_description: "Howrah Monsoon Run is the first monsoon marathon in Howrah. Events are Family Run, 10K run and 5K run."
+google_map_coordinates: '22.5723033,88.35237329999995'
+business_name: Encash Entertainment Ltd
 address: |-
-  Martin Burn House, Room No-17/3,
-  Mezzanine Floor,1 ,R.N. Mukherjee Road,
-  Kolkata- 700001, West Bengal
-phone: +91 033-40078074
-mobile: 9874070300 , 9331260835
-email: mrdfapl@gmail.com , mahesh@mrdfinancial.in
+  9, Lal Bazar Street,
+  Kolkata - 700001
+mobile: Vineet Kedia 9830230946, 9830730946
 ---
-

@@ -1,0 +1,13 @@
+marathon_type:
+  - name: Family Run
+    distance: 5KM
+    date: 26-AUG-2018
+    link: "/register/"
+  - name: 5K Run
+    distance: 5 KM
+    date: 26-AUG-2018
+    link: "/register/"
+  - name: 10K Run
+    distance: 10 KM
+    date: 26-AUG-2018
+    link: "/register/"

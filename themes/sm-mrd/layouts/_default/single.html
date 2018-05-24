@@ -1,15 +1,14 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
-{{ partial "fixed_icon.html" . }}
-  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-    <main class="pr4-l w-100 w-70-l">
-      <div class="content mb5">
+<!-- {{ partial "fixed_icon.html" . }} -->
+  <div class="container mx-auto max-w-md px-3 md:px-6 lg:px-0">
+    {{ partial "menu-contextual.html" . }}
+    <main class="py-8">
+      <div class="bg-top bg-cover mb-8" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}'); height:40vh;">
+      </div>
+      <div class="content">
         {{ .Content }}
       </div>
-      <div class="aspect-ratio w-100 aspect-ratio--21x9 mb4">
-        <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
-      </div>
     </main>
-    {{ partial "menu-contextual.html" . }}
   </div>
 {{ partial "footer.html" . }}

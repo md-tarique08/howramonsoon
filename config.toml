@@ -1,4 +1,4 @@
-baseURL = "https://mrdfinance.netlify.com/"
+baseURL = "http://howrahmonsoonrun.netlify.com/"
 languageCode = "en-us"
-title = "MRD Finance"
+title = "Howrah Monsoon Run"
 theme = "sm-mrd"

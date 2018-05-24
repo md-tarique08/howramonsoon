@@ -4,9 +4,33 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
-- label: "Products"
-  name: "products"
-  folder: "content/product"
+- label: "RaceInfo"
+  name: "raceinfo"
+  folder: "content/raceinfo"
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Order, name: order, widget: number, required: false}
+    - {label: Content, name: body, widget: markdown}
+- label: "RaceWeekend"
+  name: "raceweekend"
+  folder: "content/raceweekend"
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Order, name: order, widget: number, required: false}
+    - {label: Content, name: body, widget: markdown}
+- label: "FAQ"
+  name: "faq"
+  folder: "content/faq"
   create: true
   fields:
     - {label: Title, name: title, widget: string}
@@ -36,56 +60,6 @@ collections:
             - {label: Description, name: description, widget: text}
             - {label: Link, name: link, widget: string}
         - {label: Content, name: body, widget: markdown}
-    - label: "Product"
-      name: "product"
-      file: "content/product/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Content, name: body, widget: markdown}
-    - label: "About"
-      name: "about"
-      file: "content/about/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Content, name: body, widget: markdown}
-    - label: "Awards"
-      name: "awards"
-      file: "content/awards/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Content, name: body, widget: markdown}
-    - label: "EMI Calculator"
-      name: "emi_calculator"
-      file: "content/emi_calculator/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Content, name: body, widget: markdown}
-    - label: "Become a Partner"
-      name: "become_partner"
-      file: "content/become_partner/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Content, name: body, widget: markdown}
     - label: "Contact Page"
       name: "contact"
       file: "content/contact/_index.md"
@@ -102,57 +76,22 @@ collections:
         - {label: Phone No, name: mobile, widget: string}
         - {label: Email, name: email, widget: string}
         - {label: Content, name: body, widget: markdown}
-    - label: "Enquiry Form"
-      name: "enquiry_form"
-      file: "content/enquiry_form/_index.md"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Seo Title, name: seo_title, widget: string, required: false}
-        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-        - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
-        - label: Loan Types
-          name: loan
-          widget: list
-          fields:
-            - {label: Name, name: name, widget: string}
-        - {label: Content, name: body, widget: markdown}
 - label: "Data"
   name: "data"
   files:
-    - label: "Associations"
-      name: "associations"
-      file: "data/associations.yml"
+    - label: "Marathon Type"
+      name: "marathon_type"
+      file: "data/marathon_type.yml"
       fields:
-        - label: Associations
-          name: associations
+        - label: Marathon Type
+          name: marathon_type
           widget: list
           fields:
             - {label: Name, name: name, widget: string}
-            - {label: Image, name: image, widget: image}
-    - label: "Awards"
-      name: "awards"
-      file: "data/awards.yml"
-      fields:
-        - label: Awards
-          name: awards
-          widget: list
-          fields:
-            - {label: Name, name: name, widget: string}
-            - {label: Image, name: image, widget: image}
-    - label: "Testimonials"
-      name: "testimonials"
-      file: "data/testimonials.yml"
-      fields:
-        - label: Testimonials
-          name: testimonials
-          widget: list
-          fields:
-            - {label: Name, name: name, widget: string}
-            - {label: Company, name: company, widget: string}
-            - {label: Ddesignation, name: designation, widget: string}
-            - {label: Image, name: image, widget: image}
-            - {label: Testimonial, name: testimonial, widget: string}
+            - {label: Distance, name: distance, widget: string}
+            - {label: "Date", name: "date", widget: "date"}
+            - {label: Link, name: link, widget: string}
+    
     - label: "Meta"
       name: "meta"
       file: "data/meta.yml"
