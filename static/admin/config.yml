@@ -33,7 +33,7 @@ collections:
 - label: "FAQ"
   name: "faq"
   folder: "content/faq"
-  filter: {field: "type", value: "raceinfo"}
+  filter: {field: "type", value: "faq"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
